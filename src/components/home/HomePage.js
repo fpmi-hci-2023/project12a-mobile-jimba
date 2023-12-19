@@ -1,7 +1,15 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import Posts from './Posts';
 
-const HomePage = () => {
+
+export default function HomePage() {
+  const navigation = useNavigation();
+  const navigateToPosts = () => {
+    navigation.navigate('Posts');
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.profileContainer}>
@@ -11,9 +19,9 @@ const HomePage = () => {
         <View style={styles.settingsIcon}></View>
       </View>
       <View style={styles.menuContainer}>
-        <View style={styles.menuButton}>
+        <TouchableOpacity style={styles.menuButton} onPress={navigateToPosts}>
           <Text style={styles.menuButtonText}>Posts</Text>
-        </View>
+        </TouchableOpacity>
         <View style={styles.menuButton}>
           <Text style={styles.menuButtonText}>Friends</Text>
         </View>
@@ -30,7 +38,7 @@ const HomePage = () => {
       </View>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -95,5 +103,3 @@ const styles = StyleSheet.create({
     height: 100,
   },
 });
-
-export default HomePage;
