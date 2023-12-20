@@ -14,7 +14,7 @@ export default function HomePage() {
     <View style={styles.container}>
       <View style={styles.profileContainer}>
         <View style={styles.profileImage}></View>
-        <Text style={styles.profileName}>Profile name</Text>
+        <Text style={styles.profileName}>Profile Name</Text>
         <Text style={styles.status}>Online</Text>
         <View style={styles.settingsIcon}></View>
       </View>
@@ -43,7 +43,6 @@ export default function HomePage() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
     paddingHorizontal: 20,
     paddingTop: 20,
     backgroundColor: '#ebf2f8',
@@ -86,7 +85,7 @@ const styles = StyleSheet.create({
   menuButton: {
     flex: 1,
     height: 40,
-    backgroundColor: '#c8e5ff',
+    backgroundColor: '#93a8ba',
     alignItems: 'center',
     justifyContent: 'center',
     marginHorizontal: 5,

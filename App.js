@@ -54,7 +54,7 @@ export default function App() {
       </TouchableOpacity>
       <Text>{'\n'}</Text>
       <TouchableOpacity onPress={navigateToPosts}>
-        <Text>Click here to open Posts{'\n'}</Text>
+        <Text>Click here to open Posts</Text>
       </TouchableOpacity>
       <Text>{'\n'}</Text>
       <TouchableOpacity onPress={navigateToVideo}>
