@@ -34,7 +34,7 @@ export default function HomePage() {
       </View>
       <Text style={styles.aboutMe}>About me</Text>
       <View style={styles.textField}>
-        <Text>Oh lalalala</Text>
+        <Text style={styles.aboutMeText}>Oh lalalala</Text>
       </View>
     </View>
   );
@@ -46,16 +46,20 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     paddingHorizontal: 20,
     paddingTop: 20,
+    backgroundColor: '#ebf2f8',
   },
   profileContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 20,
+    paddingBottom: 20,
+    paddingTop: 20,
+    backgroundColor: '#fff',
+    borderRadius: 38,
   },
   profileImage: {
     width: 100,
     height: 100,
-    backgroundColor: 'gray',
+    backgroundColor: '#93a8ba',
     borderRadius: 50,
   },
   profileName: {
@@ -70,21 +74,23 @@ const styles = StyleSheet.create({
   settingsIcon: {
     width: 20,
     height: 20,
-    backgroundColor: 'gray',
+    backgroundColor: '#93a8ba',
     marginTop: 10,
   },
   menuContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginBottom: 20,
-  },
+    marginTop: 20,
+},
   menuButton: {
     flex: 1,
     height: 40,
-    backgroundColor: 'lightblue',
+    backgroundColor: '#c8e5ff',
     alignItems: 'center',
     justifyContent: 'center',
     marginHorizontal: 5,
+    borderRadius: 38,
   },
   menuButtonText: {
     fontSize: 16,
@@ -94,12 +100,17 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 10,
+    marginLeft: 20,
   },
   textField: {
     borderWidth: 1,
     borderColor: 'lightgray',
-    borderRadius: 5,
+    borderRadius: 38,
     padding: 10,
     height: 100,
+    backgroundColor: '#fff',
+  },
+  aboutMeText: {
+    marginLeft: 20,
   },
 });

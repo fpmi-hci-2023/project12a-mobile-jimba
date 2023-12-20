@@ -1,5 +1,7 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import meme1 from '../../assets/meme1.webp';
+import meme2 from '../../assets/meme2.jpg';
 
 const Post = ({ author, content, image }) => {
   return (
@@ -30,12 +32,12 @@ const Posts = () => {
       <Post
         author="Gabe Itch"
         content="This is my first post!"
-        image='./src/assets/meme1.webp'
+        image={meme1}
       />
       <Post
         author="Rae Piste"
         content="Check out this amazing photo"
-        image='./src/assets/meme2.jpg'
+        image={meme2}
       />
     </View>
   );
@@ -45,7 +47,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: '#fff',
+    backgroundColor: '#ebf2f8',
   },
   timelineText: {
     fontSize: 24,
@@ -53,34 +55,47 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   postContainer: {
+    backgroundColor: '#fff',
     marginBottom: 24,
+    borderRadius: 38,
   },
   authorContainer: {
     marginBottom: 8,
+    marginLeft: 20,
+    marginTop: 15,
   },
   authorText: {
     fontSize: 16,
     fontWeight: 'bold',
+    marginLeft: 20,
   },
   contentContainer: {
     marginBottom: 8,
+    marginLeft: 20,
   },
   contentText: {
     fontSize: 14,
     marginBottom: 8,
+    marginLeft: 20,
   },
   image: {
-    width: '100%',
-    height: 200,
+    width: '50%',
+    height: 600,
+    aspectRatio: 1,
     marginBottom: 8,
+    marginLeft: 20,
   },
   buttonsContainer: {
     flexDirection: 'row',
+    marginLeft: 20,
   },
   button: {
     marginRight: 8,
     padding: 8,
-    backgroundColor: '#e0e0e0',
+    backgroundColor: '#c8e5ff',
+    borderRadius: 38,
+    marginLeft: 20,
+    marginBottom: 15,
   },
   buttonText: {
     fontSize: 14,

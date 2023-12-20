@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Linking } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from './src/components/home/HomePage';
@@ -41,16 +41,24 @@ export default function App() {
     );
   }
 
+  const navigateToVideo = () => {
+    const videoUrl = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+  
+    Linking.openURL(videoUrl);
+  };
+
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={navigateToHome}>
         <Text>Click here to open Home</Text>
       </TouchableOpacity>
+      <Text>{'\n'}</Text>
       <TouchableOpacity onPress={navigateToPosts}>
-        <Text>Click here to open Posts</Text>
+        <Text>Click here to open Posts{'\n'}</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={navigateToHome}>
-        <Text>Click here to open AAAAAAHHH</Text>
+      <Text>{'\n'}</Text>
+      <TouchableOpacity onPress={navigateToVideo}>
+        <Text>Click here to open ( ͡° ͜ʖ ͡°)</Text>
       </TouchableOpacity>
       <StatusBar style="auto" />
     </View>
